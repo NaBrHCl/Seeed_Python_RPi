@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
-import seeed_python_reterminal.core as rt
-import seeed_python_reterminal.button as rt_btn
+import seeed_python_rpi.core as rt
+import seeed_python_rpi.button as rt_btn
 
 
 device = rt.get_button_device()
