@@ -1,6 +1,6 @@
-# Python Library for reTerminal
+# Python library for Seeed RPi board
 
-This is a Python library which enables you to use the onboard hardware on the [reTerminal](https://www.seeedstudio.com/ReTerminal-with-CM4-p-4904.html) and [reTerminal Bridge](https://wiki.seeedstudio.com/reTerminalBridge/). Currently the **accelerometer, user LEDs, user buttons and buzzer** can be accessed using this Python library on reTerminal, and the **fan, RS232,  RS485, CAN** can be accessed by using this Python library on reTerminal Bridge.
+This is a Python library specifically designed for Seeed's RPi boards, enabling you to utilize the onboard hardware features.  Currently, the accelerometer, user LEDs, user buttons, and buzzer can be accessed and controlled using this library on Seeed's RPi boards.  Additionally, if your board supports features like a fan, RS232, RS485, or CAN, this library provides the necessary interfaces to interact with them as well.
 
 ## Installation
 
@@ -8,20 +8,20 @@ This is a Python library which enables you to use the onboard hardware on the [r
 
 - To install the latest release from PyPI
 ```
-sudo pip3 install seeed-python-reterminal
+sudo pip3 install seeed-python-rpi
 ```
 
 ### From Source
 
 - To install from source, clone this repository
 ```
-git clone https://github.com/Seeed-Studio/Seeed_Python_ReTerminal
+git clone https://github.com/Seeed-Studio/Seeed_Python_RPi
 ```
 
 - Install the library 
 
 ```
-cd Seeed_Python_ReTerminal
+cd Seeed_Python_rpi
 sudo pip3 install .
 ```
 
@@ -30,7 +30,7 @@ sudo pip3 install .
 ### User LEDs Test
 
 ```python
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 import time
 
 print("STA ON, USR OFF")
@@ -57,7 +57,7 @@ rt.usr_led = False
 ### Buzzer Test
 
 ```python
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 import time
 
 print("BUZZER ON")
@@ -71,8 +71,8 @@ rt.buzzer = False
 ### User Buttons Test
 
 ```python
-import seeed_python_reterminal.core as rt
-import seeed_python_reterminal.button as rt_btn
+import seeed_python_rpi.core as rt
+import seeed_python_rpi.button as rt_btn
 
 
 device = rt.get_button_device()
@@ -86,8 +86,8 @@ while True:
 ### Accelerometer Test
 
 ```python
-import seeed_python_reterminal.core as rt
-import seeed_python_reterminal.acceleration as rt_accel
+import seeed_python_rpi.core as rt
+import seeed_python_rpi.acceleration as rt_accel
 
 
 device = rt.get_acceleration_device()
@@ -102,9 +102,9 @@ while True:
 
 ```python
 import asyncio
-import seeed_python_reterminal.core as rt
-import seeed_python_reterminal.acceleration as rt_accel
-import seeed_python_reterminal.button as rt_btn
+import seeed_python_rpi.core as rt
+import seeed_python_rpi.acceleration as rt_accel
+import seeed_python_rpi.button as rt_btn
 
 
 async def accel_coroutine(device):
@@ -134,7 +134,7 @@ loop.run_forever()
 ### Illuminance Sensor Test
 ```python
 import time
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 
 while True:
     print(rt.illuminance)
@@ -146,7 +146,7 @@ while True:
 ### fan Test
 
 ```python
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 import time
 
 print("FAN ON")
@@ -163,7 +163,7 @@ rt.fan = False
 import sys
 import serial
 import time
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 
 param1 = sys.argv[1]
 
@@ -217,7 +217,7 @@ python3 test_rs232.py receive # test the receive(RX) function of RS232
 import sys
 import serial
 import time
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 
 param1 = sys.argv[1]
 

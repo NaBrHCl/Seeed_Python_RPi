@@ -4,13 +4,13 @@ with open('README.md') as f:
     long_description = f.read()
 
 setup(
-    name='seeed-python-reterminal',
-    version='0.5',
-    description='seeed-python-reterminal',
+    name='seeed-python-rpi',
+    version='0.6',
+    description='seeed-python-rpi',
     long_description=long_description,
     long_description_content_type='text/markdown',
     license='MIT License',
-    url='https://github.com/Seeed-Studio/Seeed_Python_ReTerminal',
+    url='https://github.com/Seeed-Studio/Seeed_Python_RPi',
     author='Takashi Matsuoka (matsujirushi)',
     author_email='matsujirushi@live.jp',
     classifiers=[
@@ -18,7 +18,6 @@ setup(
     ],
     install_requires=[
         "evdev",
-        "RPi.GPIO",
     ],
     packages=find_packages(
         exclude=[

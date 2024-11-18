@@ -3,7 +3,7 @@
 import sys
 import serial
 import time
-import seeed_python_reterminal.core as rt
+import seeed_python_rpi.core as rt
 
 param1 = sys.argv[1]
 
